@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, HStack, Input, Button, IconButton, Text, Checkbox, Box, Heading } from "@chakra-ui/react";
+import { Container, VStack, HStack, Input, Button, IconButton, Text, Checkbox, Box, Heading, Center } from "@chakra-ui/react";
 import { FaTrash, FaPlus } from "react-icons/fa";
 
 const Index = () => {
@@ -27,7 +27,12 @@ const Index = () => {
         <Heading as="h1" size="xl" mb={6}>
           Todo App
         </Heading>
-        <HStack width="100%">
+        <Center width="100%">
+          <Button colorScheme="red" size="lg">
+            Big Red Button
+          </Button>
+        </Center>
+        <HStack width="100%" mt={4}>
           <Input placeholder="Add a new task" value={taskInput} onChange={(e) => setTaskInput(e.target.value)} />
           <IconButton aria-label="Add Task" icon={<FaPlus />} onClick={addTask} />
         </HStack>
